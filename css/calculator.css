@@ -1,0 +1,47 @@
+
+#container>.calculator>.calculator_box{
+    position: absolute;
+    margin-left: 700px;
+    border: 2px solid goldenrod;
+    width: 400px;
+    height: 500px;
+    font-size: x-large;
+    border-radius: 10px;
+}
+#input>#inputA{
+    position: absolute;
+    width: 350px;
+    height: 60px;
+    left: 25px;
+    top: 20px;
+    border: 3px solid goldenrod;
+    text-align: right;
+}
+.calculator_box>#btnA{
+    position: relative;
+    top: 10px;
+}
+.cal_img>img{
+    position: relative;
+    float: right;
+    top: 280px;
+    opacity: 50%;
+}
+/* 패드 */
+
+.calculator_box>table{
+    position: relative; 
+    text-align: center;
+    border: 2px solid goldenrod;    
+    border-collapse: collapse;
+    
+    width: 355px;
+    height: 350px;
+    left: 25px;
+    bottom: 30px;   
+    
+}
+
+
+
+

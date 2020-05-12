@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/calculator.css">
+    
+    <script>
+        var output="";
+        var result = 0;
+        
+        function input(num){
+            
+            output += num + "";
+            document.getElementById("inputA").value = output;
+        }
+        function reset(){
+            document.getElementById("inputA").value = "";
+            output = "";
+        }
+        window.onload = function(){
+            document.getElementById("btnA").onclick = function(){
+                var inputValue = document.getElementById("inputA").value;
+                // alert(eval(inputValue));
+                document.getElementById("inputA").value = eval(inputValue);
+            }
+    
+        }
+
+        
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div class="calculator">
+            <div class="calculator_box">
+                <div id="input">
+                    <input type="text" name="" id="inputA" value = "">
+                </div>
+                <div class="cal_img"><img src="ryan.png" width = "150" height = "150"alt=""></div>
+                
+                <table border="1">
+                    <tr>
+                        <td onclick="reset()">C</td>
+                        <td onclick="input('/')">/</td>
+                        <td onclick="input('*')">*</td>
+                        <td onclick="input('-')">-</td>
+                    </tr>
+                    <tr>
+                        <td onclick="input(7)">7</td>
+                        <td onclick="input(8)">8</td>
+                        <td onclick="input(9)">9</td>
+                        <td rowspan="2" onclick="input('+')">+</td>
+                    </tr>
+                    <tr>
+                        <td onclick="input(4)">4</td>
+                        <td onclick="input(5)">5</td>
+                        <td onclick="input(6)">6</td>
+                    </tr>
+                    <tr>
+                        <td onclick="input(1)">1</td>
+                        <td onclick="input(2)">2</td>
+                        <td onclick="input(3)">3</td>
+                        <td rowspan="2" onclick="input('=')" id ="btnA">=</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" onclick="input(0)">0</td>
+                        <td onclick="input('.')">.</td>
+                        
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
